@@ -155,12 +155,12 @@ public class AppUtils {
     public static int getImageResourceId(String imageName) {
         Class drawable = R.drawable.class;
         Field field = null;
-        int r_id;
+        int r_id = 0;
         try {
             field = drawable.getField(imageName);
             r_id = field.getInt(field.getName());
         } catch (Exception e) {
-            r_id = R.drawable.z_p_ic_gonggao;
+//            r_id = R.drawable.z_p_ic_gonggao;
             Log.e("ERROR", "PICTURE NOT　FOUND！");
         }
         return r_id;
